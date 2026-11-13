@@ -67,8 +67,8 @@ function App() {
   return (
     <main className="site-shell">
       <header className="site-header">
-        <button className="wordmark" onClick={() => scrollTo('home')} aria-label="Miss-Mrs. Salon home">
-          <span>miss-mrs.</span>
+        <button className="wordmark" onClick={() => scrollTo('home')} aria-label="Miss-Mrs Salon home">
+          <span>Miss-Mrs</span>
           <small>unisex salon</small>
         </button>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
@@ -96,7 +96,7 @@ function App() {
           <div className="hero-note"><Sparkles size={16} /> Your beauty. Your style. Your moment.</div>
         </div>
         <div className="hero-visual">
-          <div className="hero-image-wrap"><img src={images.bridal} alt="Bridal makeup look at Miss-Mrs. Salon" /></div>
+          <div className="hero-image-wrap"><img src={images.bridal} alt="Bridal makeup look at Miss-Mrs Salon" /></div>
           <div className="hero-side-label">Hair · Makeup · Grooming</div>
           <div className="hero-stamp"><span>Since</span><strong>Miss<br />Mrs.</strong><span>Beauty, your way</span></div>
         </div>
@@ -107,7 +107,7 @@ function App() {
         <div className="section-kicker">01 <span /> About the salon</div>
         <div className="intro-grid">
           <div className="intro-heading"><p className="eyebrow">A little more about us</p><h2>Beauty is personal.<br /><em>We make it yours.</em></h2></div>
-          <div className="intro-copy"><p>Miss-Mrs. Unisex Salon, led by Joohi Saxena, is dedicated to making every client feel confident, beautiful and comfortable.</p><p>From everyday grooming to special occasions, we bring professional care, creativity and attention to detail to every experience.</p><button className="circle-link" onClick={() => scrollTo('contact')} aria-label="Meet your beauty team"><ArrowRight size={22} /></button></div>
+          <div className="intro-copy"><p>Miss-Mrs Salon, led by Joohi Saxena, is dedicated to making every client feel confident, beautiful and comfortable.</p><p>From everyday grooming to special occasions, we bring professional care, creativity and attention to detail to every experience.</p><button className="circle-link" onClick={() => scrollTo('contact')} aria-label="Meet your beauty team"><ArrowRight size={22} /></button></div>
         </div>
         <div className="values-row">
           <div className="values-image"><img src={images.salon} alt="A welcoming salon interior" /></div>
@@ -134,7 +134,7 @@ function App() {
       </section>
 
       <section className="why-section section-pad">
-        <div className="why-intro"><div className="section-kicker">05 <span /> The Miss-Mrs. difference</div><h2>A little more<br /><em>than a salon.</em></h2><p>A space where expertise feels effortless, conversations feel easy and you leave feeling a little more like yourself.</p></div>
+        <div className="why-intro"><div className="section-kicker">05 <span /> The Miss-Mrs difference</div><h2>A little more<br /><em>than a salon.</em></h2><p>A space where expertise feels effortless, conversations feel easy and you leave feeling a little more like yourself.</p></div>
         <div className="why-grid">{[{ icon: <Sparkles />, title: 'Personalized attention', text: 'Every appointment begins with you.' }, { icon: <Scissors />, title: 'Professional expertise', text: 'Skill, care and a beautiful eye for detail.' }, { icon: <Star />, title: 'A considered experience', text: 'A calm, comfortable place to press pause.' }, { icon: <CalendarDays />, title: 'For every occasion', text: 'Everyday grooming to your biggest moments.' }].map((item) => <div className="why-card" key={item.title}><div className="why-icon">{item.icon}</div><h3>{item.title}</h3><p>{item.text}</p></div>)}</div>
       </section>
 
@@ -144,7 +144,7 @@ function App() {
 
       <section className="contact-section section-pad" id="contact"><div className="contact-panel"><div className="contact-copy"><div className="section-kicker">08 <span /> Make an appointment</div><h2>Your next beauty<br /><em>experience starts here.</em></h2><p>Have a special occasion coming up or simply want to treat yourself? Get in touch and let's plan your next look.</p><div className="contact-placeholder"><MessageCircle size={18} /><span>WhatsApp & phone details can be added here.</span></div></div>{submitted ? <div className="success-state"><div className="success-icon"><Check size={28} /></div><h3>Thank you for reaching out.</h3><p>Your enquiry has been noted for this demonstration. We’ll be ready to connect your preferred contact channel next.</p><button className="text-link" onClick={() => setSubmitted(false)}>Send another enquiry <ArrowRight size={15} /></button></div> : <form className="appointment-form" onSubmit={handleSubmit}><label>Full name<input required type="text" placeholder="Your name" /></label><label>Phone number<input required type="tel" placeholder="Your phone number" /></label><label>Service interested in<select required defaultValue=""><option value="" disabled>Select a service</option>{services.map((service) => <option key={service.name}>{service.name}</option>)}</select><ChevronDown size={16} /></label><label>Preferred location<select required defaultValue=""><option value="" disabled>Choose a location</option><option>Sector 15, Vasundhara</option><option>Apex Florus Market, Sector 18</option></select><ChevronDown size={16} /></label><label>Preferred appointment date<input required type="date" /></label><label>Additional message<textarea placeholder="Tell us a little about what you have in mind" rows={3} /></label><button className="button button-dark form-submit" type="submit">Send appointment enquiry <ArrowRight size={16} /></button><small>This is a frontend enquiry form. Contact details can be connected when ready.</small></form>}</div></section>
 
-      <footer className="site-footer"><div className="footer-top"><div className="footer-brand"><div className="wordmark"><span>miss-mrs.</span><small>unisex salon</small></div><p>Beauty, confidence and a little more of you — in every appointment.</p><a href="https://www.instagram.com/missmrssalon/" target="_blank" rel="noreferrer"><Instagram size={17} /> @missmrssalon</a></div><div className="footer-links"><div><strong>Explore</strong><button onClick={() => scrollTo('about')}>About us</button><button onClick={() => scrollTo('services')}>Services</button><button onClick={() => scrollTo('gallery')}>Our work</button></div><div><strong>Visit</strong>{locations.map((location) => <span key={location}>{location}</span>)}</div><div><strong>Connect</strong><span>Phone details coming soon</span><span>WhatsApp details coming soon</span><button onClick={() => scrollTo('contact')}>Book an appointment <ArrowRight size={14} /></button></div></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Miss-Mrs. Unisex Salon</span><span>Made with intention in Vasundhara</span></div></footer>
+      <footer className="site-footer"><div className="footer-top"><div className="footer-brand"><div className="wordmark"><span>Miss-Mrs</span><small>unisex salon</small></div><p>Beauty, confidence and a little more of you — in every appointment.</p><a href="https://www.instagram.com/missmrssalon/" target="_blank" rel="noreferrer"><Instagram size={17} /> @missmrssalon</a></div><div className="footer-links"><div><strong>Explore</strong><button onClick={() => scrollTo('about')}>About us</button><button onClick={() => scrollTo('services')}>Services</button><button onClick={() => scrollTo('gallery')}>Our work</button></div><div><strong>Visit</strong>{locations.map((location) => <span key={location}>{location}</span>)}</div><div><strong>Connect</strong><span>Phone details coming soon</span><span>WhatsApp details coming soon</span><button onClick={() => scrollTo('contact')}>Book an appointment <ArrowRight size={14} /></button></div></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Miss-Mrs Salon</span><span>Made with intention in Vasundhara</span></div></footer>
       <a className="floating-book" href="#contact" onClick={(event) => { event.preventDefault(); scrollTo('contact'); }}><Phone size={17} /> Book now</a>
     </main>
   );
